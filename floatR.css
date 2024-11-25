@@ -1,0 +1,64 @@
+.whatsapp-float {
+    bottom: 2rem;
+    text-decoration: none;
+    position: fixed;
+    z-index: 99; cursor: pointer;
+}
+
+.whatsapp-float.left {
+    left: 2rem;
+}
+
+.whatsapp-float.right {
+    right: 2rem;
+}
+
+.whatsapp-float .whatsapp-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem;
+    background: linear-gradient(to bottom, #5AD165, #22B039);
+    color: white;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.whatsapp-float:hover .whatsapp-button,
+.whatsapp-float:focus .whatsapp-button,
+.whatsapp-float:active .whatsapp-button {
+    background: linear-gradient(to bottom, #57CE62, #1FA032);
+}
+
+.whatsapp-float .whatsapp-button i {
+    font-size: 2em;
+}
+
+.whatsapp-float .whatsapp-call {
+    line-height: .75rem;
+    top: .50rem;
+    color: #222;
+    background-color: #fff;
+    border: 1px solid #39bd4b;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 0 rgba(57, 189, 75, .3);
+    font-size: .8em;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}
+
+.whatsapp-float.left .whatsapp-call {
+    left: 2rem;
+    padding: .5rem .75rem .5rem 2rem;
+}
+
+.whatsapp-float.right .whatsapp-call {
+    right: 2rem;
+    padding: .5rem 2rem .5rem .75rem;
+}

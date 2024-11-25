@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f2m</title>
+    <link rel="stylesheet" href="./dail.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./floatButton.css">
+    <link rel="stylesheet" href="./tableA.css">
+    <link rel="stylesheet" href="./floatR.css">
+</head>
+
+<body>
+
+    <div id="s" style="background-color: yellow; height: 50vh; width: 2vw; position: absolute; left: 0; top: 0;"></div>
+
+    <button id="installBtn" style="display: none;" class="float-button">
+        <img src="./favicon-16x16.png">
+        <span>Install App<span>
+    </button>
+    <!-- whatsapp button (left or right) -->
+    <a class="whatsapp-float left" id="reloadRandom">
+        <div class="whatsapp-button">
+            <img src="./favicon-16x16.png">
+        </div>
+        <span class="whatsapp-call">
+            <span>reload</span>
+            <span>random</span>
+        </span>
+    </a>
+
+    
+  <div class="css-mobile" style="margin: 0 0 0 0; width: 100vw;">
+    <div class="mobile-body">
+      <div class="front-top">
+        <div class="reciver"></div>
+        <div class="cam"></div>
+      </div>
+      <div class="nav-bar">
+        <div class="left-time"></div>
+        <div class="right-tower">
+          <div class="main-tower">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="wifi"></div>
+          <div class="battery-bar">
+            <div class="batter-inner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="dail-screen">
+        <input type="tel" for="phone" id="input__num" />
+        <a class="delete" id="delet" href="javascript:void(0)">&times;</a>
+      </div>
+      <div class="dial-pad">
+        <button class="numbers" data-number="1">1</button>
+        <button class="numbers" data-number="2">2<span>ABC</span></button>
+        <button class="numbers" data-number="3">3<span>DEF</span></button>
+        <button class="numbers" data-number="4">4<span>GHI</span></button>
+        <button class="numbers" data-number="5">5<span>JKL</span></button>
+        <button class="numbers" data-number="6">6<span>MNO</span></button>
+        <button class="numbers" data-number="7">7<span>PQRS</span></button>
+        <button class="numbers" data-number="8">8<span>TUV</span></button>
+        <button class="numbers" data-number="9">9<span>WXYZ</span></button>
+        <button class="numbers" data-number="*">*</button>
+        <button class="numbers" data-number="0">0<span>+</span></button>
+        <button class="numbers" data-number="#">#</button>
+      </div>
+      <div class="call-btn">
+        <a href="javascript:void(0)" id="phone-btn" class="numbers"><span></span></a>
+      </div>
+    </div>
+  </div>
+
+    <!--///////////////////////////////////////////-->
+
+    <table class="table-fill">
+        <thead>
+            <tr>
+                <th class="text-left">item</th>
+                <th class="text-left">number</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            <tr>
+                <td class="text-left">airport</td>
+                <td class="text-left" id="a">-</td>
+            </tr>
+            <tr>
+                <td class="text-left">Country</td>
+                <td class="text-left" id="b">-</td>
+            </tr>
+            <tr>
+                <td class="text-left">Runway(ft)</td>
+                <td class="text-left" id="c">-</td>
+            </tr>
+            <tr>
+                <td class="text-left">Runway(m)</td>
+                <td class="text-left" id="d">-</td>
+            </tr>
+            <tr>
+                <td class="text-left">Possible Aircraft</td>
+                <td class="text-left" id="e">-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table style="display: none;" id="mainT">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>ft</th>
+                <th>m</th>
+                <th>Possible Aircraft</th>
+            </tr>
+        </thead>
+        <tbody id="main"></tbody>
+    </table>
+
+    <script src="./app.js"></script>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./append.js"></script>
+    <script src="./dail.js"></script>
+</body>
+
+</html>
